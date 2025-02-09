@@ -28,17 +28,12 @@ const userSchema = new mongoose.Schema({
             }
         }
     },
-    userId: {
+    name: {
         type: String,
         required: true,
-        unique: true,
+        
     },
-    friends: [
-        {
-            type: mongoose.Schema.Types.ObjectId,
-            ref: 'User',
-        }
-    ],
+  
     tokens: [
         {
             token: {
